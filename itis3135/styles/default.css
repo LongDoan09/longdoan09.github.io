@@ -5,7 +5,7 @@ body{
 }
 a:hover{
     color:aliceblue;
-    text-decoration: line;
+    
 }
 img{
     width: 75%;
@@ -15,4 +15,8 @@ figure{
 }
 ul{
     text-align: left;
+}
+footer{
+    text-align: center;
+    
 }
