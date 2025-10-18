@@ -4,7 +4,6 @@
     --bg1: #e0f7fa; /* light aqua */
     --bg2: #e8eaf6; /* pale blue */
     --accent: #00796b; /* teal */
-    --accent2: #1e88e5; /* blue */
     --muted: #37474f; /* dark gray */
     --card-bg: rgba(255, 255, 255, 0.85);
 }
@@ -92,7 +91,7 @@ footer {
     width: calc(100% - 2rem); /* ensures footer width includes padding */
     z-index: 1000;
 }
-footer a { text-decoration: none; color: var(--accent2); font-weight: 600; }
+footer a { text-decoration: underline; color: var(--accent); font-weight: 600; }
 
 /* Table styling */
 table {
