@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLTSVA Field Day | Register</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">CLTSVA</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Register for the SVA Tournament</h1>
+
+  <p>Please complete the form below to register for the upcoming UNC System SVA Tournament. 
+     Required fields are marked with *</p>
+
+  <form id="regForm" class="reg-form">
+
+    <!-- Name -->
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" required>
+
+    <!-- Student ID (optional) -->
+    <label for="studentId">Student ID (Optional)</label>
+    <input type="text" id="studentId">
+
+    <!-- Email -->
+    <label for="email">Email *</label>
+    <input type="email" id="email" required>
+
+    <!-- Military Association -->
+    <label for="association">Military Association *</label>
+    <select id="association" required>
+      <option value="">-- Select One --</option>
+      <option value="Veteran">Veteran</option>
+      <option value="Reserve">Reserve</option>
+      <option value="ROTC">ROTC</option>
+      <option value="Beneficiary">Beneficiary</option>
+      <option value="Supporter">Supporter (Greatly Appreciated)</option>
+    </select>
+
+    <!-- Number of Guests -->
+    <label for="guests">Number of Guests *</label>
+    <input type="number" id="guests" min="0" required>
+
+    <button type="submit" class="btn">Submit Registration</button>
+    <button type="reset" class="btn btn-alt">Clear Form</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 UNC Charlotte Student Veterans of America</p>
+  
+</footer>
+
+</body>
+</html>

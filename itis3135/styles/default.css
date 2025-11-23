@@ -68,3 +68,125 @@ main {
         width: 100%;
     }
 }
+/* ====== General Result Page Styling ====== */
+body {
+    background-color: #f4b6b6; /* soft pink background */
+    font-family: Arial, sans-serif;
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Center all h2 headings */
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+  /* Center the user image and caption */
+  #introForm img {
+    display: block;
+    margin: 10px auto;
+    width: 25%;
+    border: none;
+  }
+  
+  #introForm .img-caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: -5px;
+  }
+  
+  /* Left-align the main content text */
+  #introForm p, 
+  #introForm ul {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  
+  /* Bold labels */
+  #introForm strong {
+    font-weight: bold;
+  }
+  
+  /* Course list indentation */
+  #introForm ul {
+    list-style-type: disc;
+    padding-left: 50px;
+  }
+  
+  /* Center Favorite Quote section */
+  #introForm .quote-label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #introForm .quote-text {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  
+  /* Bottom links centered */
+  h3:last-of-type,
+  #introForm p:last-of-type {
+    text-align: center;
+  }
+  
+  /* Buttons */
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    display: block;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff4c4c;
+  }
+  
+  button:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+  }
+
+  /* JSON output box styling */
+.json-output {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Make code readable and indented nicely */
+  .json-output pre {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap; /* keeps line breaks and indentation */
+    word-break: break-word;
+  }
+  
+  
+  
+  
+  

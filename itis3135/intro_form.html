@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/introduction.js" defer></script>
+    <script src="scripts/generate_html.js" defer></script>
+    <script src="scripts/generate_json.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    
+<main>
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below</h3>
+    <form id="introForm">
+        <!-- Your fieldsets -->
+        <fieldset>
+            <legend>Your Information</legend>
+            <label>First Name: <input type="text" name="firstName" value="Long" placeholder="firstname" required></label><br>
+            <label>Middle Name (optional): <input type="text" name="middleName" placeholder="middle initial"></label><br>
+            <label>Preferred Name (optional): <input type="text" name="preferredName" placeholder="nickname"></label><br>
+            <label>Last Name: <input type="text" name="lastName" value="Doan" placeholder="lastname" required></label><br>      
+        </fieldset>
+        
+        <fieldset>
+            <legend>Your Mascot</legend>
+            <label>Mascot Adjective: <input type="text" name="mascotAdj" value="Loyal" placeholder="Mascot Adjective" required></label><br>
+            <label>Mascot Animal: <input type="text" name="mascotAnimal" value="Donkey" placeholder="Mascot Animal" required></label><br>
+            <label>Divider: <input type="text" name="divider" value="||" placeholder="Divider" required></label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Picture</legend>
+            <img id="previewImage" src="images/DSC00591_small.jpeg" alt="Default Picture" width="150"><br>
+            <label>Upload Your Picture:
+                <input type="file" name="picture" accept="image/*">
+            </label><br>
+            <label>Picture Caption:
+                <input type="text" name="picCaption" value="Night at the beach" required placeholder="Enter caption">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Statement</legend>
+            <textarea name="personalStatement" rows="3" placeholder="Your Personal Statement">I am passionate about computer and technology.</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Main Bullets</legend>
+            <label>1. Personal Background: <input type="text" name="bullet1" value="My name is Long Doan and I am a student at UNC Charlotte." required></label><br>
+            <label>2. Academic Background: <input type="text" name="bullet2" value="I am a junior at UNC Charlotte with major in Computer Science" required></label><br>
+            <label>3. Professional Goals: <input type="text" name="bullet3" value="My professional goal is to have a career in Cybersecurity." required></label><br>
+            <label>4. Future Goals: <input type="text" name="bullet4" value="My future goal is be able to make 6 figures." required></label><br>
+            <label>5. Skills: <input type="text" name="bullet5" value="Technology skills, and Teamwork skills" required></label><br>
+            <label>6. Interests: <input type="text" name="bullet6" value="I am interested in sports." required></label><br>
+            <label>7. Favorite Course: <input type="text" name="bullet7" value="My favorite course is Statistics" required></label>
+        </fieldset>
+
+        <fieldset id="courseSection">
+            <legend>Courses</legend>
+            <div class="course">
+              <input type="text" value="Math" placeholder="Department" required>
+              <input type="text" value="STAT 2122" placeholder="Class Number" required>
+              <input type="text" value="Introduction to Statistics and Probability" placeholder="Class Name" required>
+              <input type="text" value="I am taking this class because it is a requirement for computer science and I like math." placeholder="Why you taking this class?" required>
+            </div>
+            <button type="button" id="addCourse">+ Add Course</button>
+            <button type="button" id="removeCourse">- Remove Course</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quote</legend>
+            <label>Quote: <input type="text" name="quote" value="You miss 100% of the shots you don’t take" required></label><br>
+            <label>Quote Author: <input type="text" name="quoteAuthor" value="Wayne Gretzky" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras</legend>
+            <label>Funny Thing (optional): <input type="text" name="Funny Thing" placeholder="Something funny..."></label><br>
+            <label>Something to Share (optional): <input type="text" name="Thing to share" placeholder="Something unique..."></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Links</legend>
+            <input type="url" name="link1" value="https://linkedin.com/in/long-doan-359a442a5" placeholder="LinkedIn URL" required><br>
+            <input type="url" name="link2" value="https://github.com/LongDoan09" placeholder="GitHub URL" required><br>
+            <input type="url" name="link3" value="https://github.com/LongDoan09/longdoan09.github.io" placeholder="GitHub.io URL" required><br>
+            <input type="url" name="link4" value="https://webpages.charlotte.edu/ddoan3/" placeholder="Charlotte Webpage URL" required><br>
+            <input type="url" name="link5" value="https://www.freecodecamp.org/longdoan09" placeholder="FreeCodeCamp URL" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Acknowledge Statement</legend>
+            <label>
+                <input type="checkbox" name="ackStatement" required>
+                I acknowledge that everything I have input is not personal and can be made public.
+            </label><br>
+            
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clearButton">Clear Form</button>
+            <button type="button" id="generateHTML">Generate HTML</button> 
+            <button type="button" id="generateJSON">Generate JSON</button>
+        </div>
+        
+        
+    </form>
+
+    <!-- Output container -->
+    <div id="outputContainer"></div>
+
+</main>
+<footer>
+    <div data-include="components/footer.html"></div>
+
+</footer>
+<script src="scripts/HTMLInclude.min.js"></script>
+
+</body>
+</html>
