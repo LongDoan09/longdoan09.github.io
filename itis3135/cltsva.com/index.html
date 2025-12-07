@@ -6,21 +6,13 @@
   <title>CLTSVA | Home</title>
   <link rel="stylesheet" href="styles/style.css">
   <script defer src="scripts/scripts.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">CLTSVA</div>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div data-include="components/header.html"></div>
 </header>
 
 <main>
@@ -77,10 +69,8 @@
       
 </main>
 
-<footer>
-  <p>&copy; 2025 UNC Charlotte Student Veterans of America</p>
-  
-</footer>
+<footer><div data-include="components/footer.html"></div></footer>
+  <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
 </html>
